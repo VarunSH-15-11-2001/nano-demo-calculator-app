@@ -13,7 +13,7 @@ def add():
     m = request.get_json()['second']
     k = n+m
     print(k)
-    return str(n+m), 200
+    return jsonify(n+m)
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
@@ -21,7 +21,7 @@ def subtract():
     m = request.get_json()['second']
     k = n-m
     print(k)
-    return jsonify(str(n-m), 200)
+    return jsonify(n-m)
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
