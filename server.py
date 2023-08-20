@@ -12,8 +12,8 @@ def add():
     n = request.get_json()['first']
     m = request.get_json()['second']
     k = n+m
-    print(k)
-    return jsonify(n+m)
+    res = "result: %s" % str(k)
+    return jsonify(res)
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
