@@ -9,8 +9,8 @@ def greeting():
 
 @app.route("/calculator/add", methods=['POST'])
 def add():
-    n = request.get_json()['first']
-    m = request.get_json()['second']
+    n = int(request.get_json()['first'])
+    m = int(request.get_json()['second'])
     k = n+m
     res = f"result: {k}"
     return jsonify(res)
