@@ -17,7 +17,7 @@ crow::response add(const crow::request& req)
 
     return crow::response { "{\"result\":" + to_string(result) + "}" };
 }
-crow::response add(const crow::request& req)
+crow::response subtract(const crow::request& req)
 {
     auto input = crow::json::load(req.body);
 
