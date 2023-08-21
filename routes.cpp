@@ -1,4 +1,6 @@
 #include "crow_all.h"
+#include <iostream>
+using namespace std;
 
 crow::response greet()
 {
